@@ -1,0 +1,41 @@
+.snippetBox{
+    background-color: black;
+    height: 100%;
+    widows: 50%;
+}
+
+.textBox{
+    color:white; 
+    background-color: black;
+    height: 100px;
+    padding: 20px, 10px, 20px, 10px;
+}
+
+/* 
+/* TESTING
+.textBox{
+color:#ffffff;  /* Original color: #949494; */
+font-family: CONSOLAS;
+font-size: 90%;
+background-color: #242424;
+border: 1px solid #515151;
+/*In charge of placing the block correctly with a line break*/
+display:block;
+/*This edits INSIDE the text area*/
+text-align: left;
+padding-top: 1%;
+padding-bottom: 1%;
+padding-right: 1%;
+padding-left: 1%;
+/*This edits the OUTSIDE POSITION of the text area*/
+min-width: 800px;
+min-height: 0px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 0px;
+  /*This takes out scroll bars, the overflow is specifically for IE*/
+  overflow: auto;
+  resize: none;
+} */ */

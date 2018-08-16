@@ -1,0 +1,22 @@
+
+
+
+.innerBoxRed{
+    background-color: red;
+    height: 97%;
+    width: 98.5%;
+    padding: 1%;
+}
+
+.innerBoxBlack{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+}
+
+.text{
+    color: white;
+    padding-left: 600px;
+    padding-top: 350px;
+}

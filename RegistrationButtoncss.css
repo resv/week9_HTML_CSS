@@ -1,0 +1,45 @@
+#register{
+    margin:300px 48%;
+    font-size: 2em;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+body {
+    background-color: darkgray;
+}
+
+#overlay{
+    background-color: black;
+    width: 100%;
+    height:100%;
+    opacity: .2;
+    display: none;
+    z-index: 10;
+    position: absolute;
+}
+
+#dialog{
+    position: fixed;
+    left: 30%;
+    top: 200px;
+    width: 40%;
+    height: 200px;
+    border: groove 5px black;
+    background-color: white;
+    display: none;
+    z-index: 20;
+    padding: 15px;
+}
+
+.textbox{
+    width: 200px;
+}
+
+#dialog label{
+    display: inline-block;
+    width: 18%;
+    text-align: right;
+}
+

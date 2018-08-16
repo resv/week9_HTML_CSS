@@ -1,0 +1,21 @@
+.column{
+    width: 25%;
+    height: 380px;
+    margin: 4%;
+    /* border-radius: 380%; */
+}
+
+.left{
+    background-color: red;
+    float: left;
+}
+
+.center{
+    background-color: green;
+    float: left;
+}
+
+.right{
+    background-color: blue;
+    float: right;
+}

@@ -1,0 +1,20 @@
+.test1 {
+    border: 10px;
+    border-color: black;
+    background-color: green;
+    border-width: 2px;
+}
+
+.test2 {
+    border: 10px;
+    border-color: yellow;
+    background-color: green;
+    border-width: 5px;
+}
+
+.test3 {
+    border: 10px;
+    border-color: blue;
+    background-color: green;
+    border-width: 10px;
+}

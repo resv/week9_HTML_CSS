@@ -1,0 +1,60 @@
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="C:\Users\akim4\Google Drive\CODE\JAVAPROGRAMS\PERSCHOLAS PLATFORM JD WORKSPACE\src\week9_HTML_CSS\RegistrationButtoncss.css"> 
+    
+    <script>
+    function showDialog(show){
+        var display = show ? 'block' : 'none';
+        var overlay = document.getElementById('overlay');
+        var dialog = document.getElementById('dialog');
+        overlay.style.display = display;
+        dialog.style.display = display;
+    }
+
+    function closeDialog(){
+        var overlay = document.getElementById('overlay');
+        overlay.style.display = none;
+        var dialog =document.getElementById('dialog');
+        dialog.style.display = none;
+    }
+    </script>
+
+</head>
+<body>
+    <div id="overlay"></div>
+    <input id="register" type="button" value="Register" onclick="showDialog(true)"/>
+<div id="dialog">
+    <form>
+
+<p>
+        <label for="userId">User Id:</label>
+        <input class="textbox" type="text" name ="userId"/>
+</p>
+
+<p>
+        <label for="pwd">Password:</label>
+        <input class="textbox" type="Password" name ="pwd"/>
+</p>
+
+<p>
+        <label for="email">Email Address:</label>
+        <input class="textbox" type="email" name ="email"/>
+</p>
+
+<p>
+        <label for="receiveEmails">Receive Emails:</label>
+        <input type="checkbox" name ="receiveEmails"/>
+</p>
+
+<p>
+        <input type="button" value="Cancel" onclick="showDialog(true)"/>
+        <input type="submit" value="Register"/>
+</p>
+
+
+</form>
+</div>
+
+
+</body>
+</html>
