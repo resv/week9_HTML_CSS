@@ -1,0 +1,711 @@
+<html>
+<link rel="stylesheet" type="text/css" href="C:\Users\akim4\Google Drive\CODE\JAVAPROGRAMS\PERSCHOLAS PLATFORM JD WORKSPACE\src\week9_HTML_CSS\FlexBoxProductscss.css">
+<script>
+  function filterProducts() {
+    var filter = document.getElementById('productFilter');
+    var index = filter.selectedIndex;
+    var table = document.getElementsByTagName('TABLE')[0];
+    var option =filter.children[index];
+    var match = option.innerText;
+    var nRowsShown = 0;
+    for(var nRow=1;nRow<table.rows.length;++nRow) {
+      var tdLine = table.rows[nRow].cells[2];
+      var pline = tdLine.innerText;
+      var display = 'table-row';
+      if (index > 0) {
+        if (pline != match) display = 'none';
+      }
+      table.rows[nRow].style.display = display;
+      if (display == 'table-row'){
+        var bgStyle = ((nRowsShown % 2) == 1) ? 'white':'lightgray';
+        table.rows[nRow].style.backgroundColor = bgStyle;
+        nRowsShown++;
+      }
+    }
+  }
+</script>
+</head>
+<body onload="filterProducts()">
+<div style="height:100%;overflow-y:auto">
+<table>
+  <caption>Classic Models Products</caption>
+  <tr>
+    <th>Product Code</th>
+    <th>Product Name</th>
+    <th>
+      <select id="productFilter" onchange="filterProducts()">
+        <option value="1">All Product Lines</option>
+        <option value="2">Classic Cars</option>
+        <option value="3">Motorcycles</option>
+        <option value="4">Planes</option>
+        <option value="5">Ships</option>
+        <option value="6">Trains</option>
+        <option value="7">Trucks &amp; Buses</option>
+        <option value="8">Vintage Cars</option>
+      </select>
+    </th>
+    <th>Scale</th>
+  </tr>
+  <tr>
+    <td>S10_1678</td>
+    <td>1969 Harley Davidson Ultimate Chopper</td>
+    <td>Motorcycles</td>
+    <td>1:10</td>
+  </tr>
+  <tr>
+    <td>S10_1949</td>
+    <td>1952 Alpine Renault 1300</td>
+    <td>Classic Cars</td>
+    <td>1:10</td>
+  </tr>
+  <tr>
+    <td>S10_2016</td>
+    <td>1996 Moto Guzzi 1100i</td>
+    <td>Motorcycles</td>
+    <td>1:10</td>
+  </tr>
+  <tr>
+    <td>S10_4698</td>
+    <td>2003 Harley-Davidson Eagle Drag Bike</td>
+    <td>Motorcycles</td>
+    <td>1:10</td>
+  </tr>
+  <tr>
+    <td>S10_4757</td>
+    <td>1972 Alfa Romeo GTA</td>
+    <td>Classic Cars</td>
+    <td>1:10</td>
+  </tr>
+  <tr>
+    <td>S10_4962</td>
+    <td>1962 LanciaA Delta 16V</td>
+    <td>Classic Cars</td>
+    <td>1:10</td>
+  </tr>
+  <tr>
+    <td>S12_1099</td>
+    <td>1968 Ford Mustang</td>
+    <td>Classic Cars</td>
+    <td>1:12</td>
+  </tr>
+  <tr>
+    <td>S12_1108</td>
+    <td>2001 Ferrari Enzo</td>
+    <td>Classic Cars</td>
+    <td>1:12</td>
+  </tr>
+  <tr>
+    <td>S12_1666</td>
+    <td>1958 Setra Bus</td>
+    <td>Trucks and Buses</td>
+    <td>1:12</td>
+  </tr>
+  <tr>
+    <td>S12_2823</td>
+    <td>2002 Suzuki XREO</td>
+    <td>Motorcycles</td>
+    <td>1:12</td>
+  </tr>
+  <tr>
+    <td>S12_3148</td>
+    <td>1969 Corvair Monza</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S12_3380</td>
+    <td>1968 Dodge Charger</td>
+    <td>Classic Cars</td>
+    <td>1:12</td>
+  </tr>
+  <tr>
+    <td>S12_3891</td>
+    <td>1969 Ford Falcon</td>
+    <td>Classic Cars</td>
+    <td>1:12</td>
+  </tr>
+  <tr>
+    <td>S12_3990</td>
+    <td>1970 Plymouth Hemi Cuda</td>
+    <td>Classic Cars</td>
+    <td>1:12</td>
+  </tr>
+  <tr>
+    <td>S12_4473</td>
+    <td>1957 Chevy Pickup</td>
+    <td>Trucks and Buses</td>
+    <td>1:12</td>
+  </tr>
+  <tr>
+    <td>S12_4675</td>
+    <td>1969 Dodge Charger</td>
+    <td>Classic Cars</td>
+    <td>1:12</td>
+  </tr>
+  <tr>
+    <td>S18_1097</td>
+    <td>1940 Ford Pickup Truck</td>
+    <td>Trucks and Buses</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_1129</td>
+    <td>1993 Mazda RX-7</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_1342</td>
+    <td>1937 Lincoln Berline</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_1367</td>
+    <td>1936 Mercedes-Benz 500K Special Roadster</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_1589</td>
+    <td>1965 Aston Martin DB5</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_1662</td>
+    <td>1980s Black Hawk Helicopter</td>
+    <td>Planes</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_1749</td>
+    <td>1917 Grand Touring Sedan</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_1889</td>
+    <td>1948 Porsche 356-A Roadster</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_1984</td>
+    <td>1995 Honda Civic</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2238</td>
+    <td>1998 Chrysler Plymouth Prowler</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2248</td>
+    <td>1911 Ford Town Car</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2319</td>
+    <td>1964 Mercedes Tour Bus</td>
+    <td>Trucks and Buses</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2325</td>
+    <td>1932 Model A Ford J-Coupe</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2432</td>
+    <td>1926 Ford Fire Engine</td>
+    <td>Trucks and Buses</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2581</td>
+    <td>P-51-D Mustang</td>
+    <td>Planes</td>
+    <td>1:72</td>
+  </tr>
+  <tr>
+    <td>S18_2625</td>
+    <td>1936 Harley Davidson El Knucklehead</td>
+    <td>Motorcycles</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2795</td>
+    <td>1928 Mercedes-Benz SSK</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2870</td>
+    <td>1999 Indy 500 Monte Carlo SS</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2949</td>
+    <td>1913 Ford Model T Speedster</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_2957</td>
+    <td>1934 Ford V8 Coupe</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3029</td>
+    <td>1999 Yamaha Speed Boat</td>
+    <td>Ships</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3136</td>
+    <td>18th Century Vintage Horse Carriage</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3140</td>
+    <td>1903 Ford Model A</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3232</td>
+    <td>1992 Ferrari 360 Spider red</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3233</td>
+    <td>1985 Toyota Supra</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3259</td>
+    <td>Collectable Wooden Train</td>
+    <td>Trains</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3278</td>
+    <td>1969 Dodge Super Bee</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3320</td>
+    <td>1917 Maxwell Touring Car</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3482</td>
+    <td>1976 Ford Gran Torino</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3685</td>
+    <td>1948 Porsche Type 356 Roadster</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3782</td>
+    <td>1957 Vespa GS150</td>
+    <td>Motorcycles</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_3856</td>
+    <td>1941 Chevrolet Special Deluxe Cabriolet</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_4027</td>
+    <td>1970 Triumph Spitfire</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_4409</td>
+    <td>1932 Alfa Romeo 8C2300 Spider Sport</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_4522</td>
+    <td>1904 Buick Runabout</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_4600</td>
+    <td>1940s Ford truck</td>
+    <td>Trucks and Buses</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_4668</td>
+    <td>1939 Cadillac Limousine</td>
+    <td>Vintage Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_4721</td>
+    <td>1957 Corvette Convertible</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S18_4933</td>
+    <td>1957 Ford Thunderbird</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S24_1046</td>
+    <td>1970 Chevy Chevelle SS 454</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_1444</td>
+    <td>1970 Dodge Coronet</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_1578</td>
+    <td>1997 BMW R 1100 S</td>
+    <td>Motorcycles</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_1628</td>
+    <td>1966 Shelby Cobra 427 S/C</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_1785</td>
+    <td>1928 British Royal Navy Airplane</td>
+    <td>Planes</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_1937</td>
+    <td>1939 Chevrolet Deluxe Coupe</td>
+    <td>Vintage Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2000</td>
+    <td>1960 BSA Gold Star DBD34</td>
+    <td>Motorcycles</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2011</td>
+    <td>18th century schooner</td>
+    <td>Ships</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2022</td>
+    <td>1938 Cadillac V-16 Presidential Limousine</td>
+    <td>Vintage Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2300</td>
+    <td>1962 Volkswagen Microbus</td>
+    <td>Trucks and Buses</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2360</td>
+    <td>1982 Ducati 900 Monster</td>
+    <td>Motorcycles</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2766</td>
+    <td>1949 Jaguar XK 120</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2840</td>
+    <td>1958 Chevy Corvette Limited Edition</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2841</td>
+    <td>1900s Vintage Bi-Plane</td>
+    <td>Planes</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2887</td>
+    <td>1952 Citroen-15CV</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_2972</td>
+    <td>1982 Lamborghini Diablo</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_3151</td>
+    <td>1912 Ford Model T Delivery Wagon</td>
+    <td>Vintage Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_3191</td>
+    <td>1969 Chevrolet Camaro Z28</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_3371</td>
+    <td>1971 Alpine Renault 1600s</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_3420</td>
+    <td>1937 Horch 930V Limousine</td>
+    <td>Vintage Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_3432</td>
+    <td>2002 Chevy Corvette</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_3816</td>
+    <td>1940 Ford Delivery Sedan</td>
+    <td>Vintage Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_3856</td>
+    <td>1956 Porsche 356A Coupe</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S24_3949</td>
+    <td>Corsair F4U ( Bird Cage)</td>
+    <td>Planes</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_3969</td>
+    <td>1936 Mercedes Benz 500k Roadster</td>
+    <td>Vintage Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_4048</td>
+    <td>1992 Porsche Cayenne Turbo Silver</td>
+    <td>Classic Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_4258</td>
+    <td>1936 Chrysler Airflow</td>
+    <td>Vintage Cars</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_4278</td>
+    <td>1900s Vintage Tri-Plane</td>
+    <td>Planes</td>
+    <td>1:24</td>
+  </tr>
+  <tr>
+    <td>S24_4620</td>
+    <td>1961 Chevrolet Impala</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S32_1268</td>
+    <td>1980’s GM Manhattan Express</td>
+    <td>Trucks and Buses</td>
+    <td>1:32</td>
+  </tr>
+  <tr>
+    <td>S32_1374</td>
+    <td>1997 BMW F650 ST</td>
+    <td>Motorcycles</td>
+    <td>1:32</td>
+  </tr>
+  <tr>
+    <td>S32_2206</td>
+    <td>1982 Ducati 996 R</td>
+    <td>Motorcycles</td>
+    <td>1:32</td>
+  </tr>
+  <tr>
+    <td>S32_2509</td>
+    <td>1954 Greyhound Scenicruiser</td>
+    <td>Trucks and Buses</td>
+    <td>1:32</td>
+  </tr>
+  <tr>
+    <td>S32_3207</td>
+    <td>1950's Chicago Surface Lines Streetcar</td>
+    <td>Trains</td>
+    <td>1:32</td>
+  </tr>
+  <tr>
+    <td>S32_3522</td>
+    <td>1996 Peterbilt 379 Stake Bed with Outrigger</td>
+    <td>Trucks and Buses</td>
+    <td>1:32</td>
+  </tr>
+  <tr>
+    <td>S32_4289</td>
+    <td>1928 Ford Phaeton Deluxe</td>
+    <td>Vintage Cars</td>
+    <td>1:32</td>
+  </tr>
+  <tr>
+    <td>S32_4485</td>
+    <td>1974 Ducati 350 Mk3 Desmo</td>
+    <td>Motorcycles</td>
+    <td>1:32</td>
+  </tr>
+  <tr>
+    <td>S50_1341</td>
+    <td>1930 Buick Marquette Phaeton</td>
+    <td>Vintage Cars</td>
+    <td>1:50</td>
+  </tr>
+  <tr>
+    <td>S50_1392</td>
+    <td>Diamond T620 Semi-Skirted Tanker</td>
+    <td>Trucks and Buses</td>
+    <td>1:50</td>
+  </tr>
+  <tr>
+    <td>S50_1514</td>
+    <td>1962 City of Detroit Streetcar</td>
+    <td>Trains</td>
+    <td>1:50</td>
+  </tr>
+  <tr>
+    <td>S50_4713</td>
+    <td>2002 Yamaha YZR M1</td>
+    <td>Motorcycles</td>
+    <td>1:50</td>
+  </tr>
+  <tr>
+    <td>S700_1138</td>
+    <td>The Schooner Bluenose</td>
+    <td>Ships</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S700_1691</td>
+    <td>American Airlines: B767-300</td>
+    <td>Planes</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S700_1938</td>
+    <td>The Mayflower</td>
+    <td>Ships</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S700_2047</td>
+    <td>HMS Bounty</td>
+    <td>Ships</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S700_2466</td>
+    <td>America West Airlines B757-200</td>
+    <td>Planes</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S700_2610</td>
+    <td>The USS Constitution Ship</td>
+    <td>Ships</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S700_2824</td>
+    <td>1982 Camaro Z28</td>
+    <td>Classic Cars</td>
+    <td>1:18</td>
+  </tr>
+  <tr>
+    <td>S700_2834</td>
+    <td>ATA: B757-300</td>
+    <td>Planes</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S700_3167</td>
+    <td>F/A 18 Hornet 1/72</td>
+    <td>Planes</td>
+    <td>1:72</td>
+  </tr>
+  <tr>
+    <td>S700_3505</td>
+    <td>The Titanic</td>
+    <td>Ships</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S700_3962</td>
+    <td>The Queen Mary</td>
+    <td>Ships</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S700_4002</td>
+    <td>American Airlines: MD-11S</td>
+    <td>Planes</td>
+    <td>1:700</td>
+  </tr>
+  <tr>
+    <td>S72_1253</td>
+    <td>Boeing X-32A JSF</td>
+    <td>Planes</td>
+    <td>1:72</td>
+  </tr>
+  <tr>
+    <td>S72_3212</td>
+    <td>Pont Yacht</td>
+    <td>Ships</td>
+    <td>1:72</td>
+  </tr>
+</table>
+
+</html>
