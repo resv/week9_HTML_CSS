@@ -1,60 +1,48 @@
 <html>
     <head>
     <link rel="stylesheet" type="text/css" href="C:\Users\akim4\Google Drive\CODE\JAVAPROGRAMS\PERSCHOLAS PLATFORM JD WORKSPACE\src\week9_HTML_CSS\RegistrationButtoncss.css"> 
-    
     <script>
-    function showDialog(show){
-        var display = show ? 'block' : 'none';
-        var overlay = document.getElementById('overlay');
-        var dialog = document.getElementById('dialog');
-        overlay.style.display = display;
-        dialog.style.display = display;
-    }
-
-    function closeDialog(){
-        var overlay = document.getElementById('overlay');
-        overlay.style.display = none;
-        var dialog =document.getElementById('dialog');
-        dialog.style.display = none;
-    }
-    </script>
-
-</head>
-<body>
-    <div id="overlay" class="overlay"></div>
-    <input id="register" type="button" value="Register" onclick="showDialog(true)"/>
-<div id="dialog" class="dialog">
-    <form>
-
-<p>
-        <label for="userId">User Id:</label>
-        <input class="textbox" type="text" name ="userId"/>
-</p>
-
-<p>
-        <label for="pwd">Password:</label>
-        <input class="textbox" type="Password" name ="pwd"/>
-</p>
-
-<p>
-        <label for="email">Email Address:</label>
-        <input class="textbox" type="email" name ="email"/>
-</p>
-
-<p>
-        <label for="receiveEmails">Receive Emails:</label>
-        <input type="checkbox" name ="receiveEmails"/>
-</p>
-
-<p>
-        <input type="button" value="Cancel" onclick="showDialog(true)"/>
-        <input type="submit" value="Register"/>
-</p>
-
-
-</form>
-</div>
-
-
-</body>
+			function showDialog(show) {
+				var overlay = document.getElementById('overlay');
+				var dialog = document.getElementById('dialog');
+				if (show) {
+					overlay.classList.add('showOvr');
+					dialog.classList.add('showDlg');
+					var userId = document.getElementById("userId");
+					userId.focus();
+				} else {
+					overlay.classList.remove('showOvr');
+					dialog.classList.remove('showDlg');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="overlay" class="overlay"></div>
+		<input id="register" type="button" value="Register" onclick="showDialog(true)"/>
+		<div id="dialog" class="dialog">
+			<form>
+				<p>
+					<label for="userId">User Id:</label>
+					<input id="userId" class="textbox" type="text" name="userId" required />
+				<p>
+				<p>
+					<label for="pwd">Password:</label>
+					<input class="textbox" type="password" name="pwd" required/>
+				<p>
+				<p>
+					<label for="email">EMail Address:</label>
+					<input class="textbox" type="email" name="email" required/>
+				<p>
+				<p>
+					<label for="receiveEmails">Receive Emails:</label>
+					<input type="checkbox" checked name="receiveEmails"/>
+				</p>
+				<p>
+					<input type="button" value="Cancel" onclick="showDialog(false)"/>
+					<input type="submit" value="Register"/>
+				</p>
+			</form>
+		</div>
+	</body>
 </html>

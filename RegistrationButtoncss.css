@@ -1,51 +1,50 @@
-#register{
-    margin:300px 48%;
-    font-size: 2em;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
-
 body {
-    background-color: darkgray;
+    background-image: linear-gradient(to bottom right, #000, #fff);
 }
-
-.overlay{
-    background-color: black;
-    width: 100%;
-    height:100%;
-    opacity: .2;
-    display: none;
-    z-index: 1;
+#register {
     position: absolute;
-    opacity: 0;
+    right:10px;
+    top: 10px;
+    font-size: 2em;
 }
-
-.dialog{
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0.25s;
+}
+.dialog {
     position: fixed;
-    left: 30%;
     top: 200px;
+    left: 30%;
     width: 40%;
-    height: 200px;
+    height: 188px;
     border: groove 5px black;
     background-color: white;
-    display: none;
-    z-index: 20;
-    padding: 15px;
     opacity: 0;
+    z-index: 0;
+    padding: 15px;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
-
-.textbox{
+.textbox {
     width: 200px;
 }
-
-#dialog label{
+.dialog label {
     display: inline-block;
     width: 18%;
     text-align: right;
 }
-
-.showOver{
+.showOvr {
     opacity: 0.2;
     z-index: 10;
     transition-property: opacity;
@@ -53,7 +52,11 @@ body {
     transition-timing-function: ease;
     transition-delay: 0;
 }
-
-.showDlg{
-    opacity:
+.showDlg {
+    opacity: 1;
+    z-index: 20;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0.5s;
 }
